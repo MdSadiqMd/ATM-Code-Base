@@ -12,22 +12,24 @@ public class Option_Selector extends User_Account {
         int x = 1;
         do {
             try {
-                data.put(952141, 191904);
+                data.put(952141, 191904); //Here we Push the ID and Pin in the hash map
                 data.put(989947, 71976);
                 System.out.println("Welcome to the ATM");
 
-                System.out.println("Enter your Customer ID");
+                System.out.print("Enter your Customer ID :");
                 setCustomerNumber(UserInput.nextInt());
 
-                System.out.println("Enter your PIN Number");
+                System.out.print("Enter your PIN Number :");
                 setPinNumber(UserInput.nextInt());
+
             } catch (Exception e) {
                 System.out.println("Enter the Valid Input");
                 x = 2;
             }
+
             int ci = getCustomerNumber();
             int pin = getPinNumber();
-            if (data.containsKey(ci) && data.get(ci) == pin) {
+            if (data.containsKey(ci) && data.get(ci) == pin) { // Verification of ID and Pin
                 getAccountType();
             } else {
                 System.out.println("Enter valid Input");
