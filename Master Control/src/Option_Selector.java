@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.IOException;
 import java.text.DecimalFormat;
-public class Option_Selector extends Account {
+public class Option_Selector extends User_Account {
     Scanner UserInput=new Scanner(System.in);
     DecimalFormat CurrencyFormat=new DecimalFormat("'$'###,##0.00");
 
